@@ -1,14 +1,25 @@
 using System;
+using System.Globalization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!!!");
-        Console.WriteLine("This is how to print in C#");
+        Console.WriteLine("Welcom to the program!");
 
-        Console.Write("What is the color? ");
-        string color = Console.ReadLine();
-        Console.WriteLine($"The color is {color}");
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Please enter your favorite number: ");
+        string input = Console.ReadLine();
+        int number = int.Parse(input);
+
+        static void Demo(string name,int number)
+        {
+            double square = Math.Pow(number, 2);
+            Console.WriteLine($"{name}, the square of your number is {square}");
+        }
+
+        Demo(name, number);
     }
 }
