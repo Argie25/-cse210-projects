@@ -15,18 +15,11 @@ public class Address
 
     public bool IsUs()
     {
-        if (_country == "USA")
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
     }
 
     public string FullAddress()
     {
-        return $"{_street} {_city} {_state} {_country}";
+        return $"{_street} {_city}\n{_state} {_country}";
     }
 }
